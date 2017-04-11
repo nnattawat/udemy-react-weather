@@ -1,11 +1,11 @@
-var React = require('react');
+'use strict'
 
-var Examples = React.createClass({
-    render: function() {
-      return (
-        <h3>Examples comp</h3>
-      );
-    }
-});
+let React = require('react');
 
+// Stateless component
+let Examples = (props) => {
+  return (
+    <h3>Examples comp</h3>
+  );
+}
 module.exports = Examples;

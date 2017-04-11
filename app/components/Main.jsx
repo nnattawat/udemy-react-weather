@@ -1,16 +1,17 @@
-var React = require('react');
-var Nav = require('Nav');
+'use strict'
 
-var Main = React.createClass({
-    render: function() {
-      return (
-        <div>
-          <Nav />
-          <h2>Main Component</h2>
-          {this.props.children}
-        </div>
-      );
-    }
-});
+let React = require('react');
+let Nav = require('Nav');
+
+// Stateless component
+let Main = (props) => {
+  return (
+    <div>
+      <Nav />
+      <h2>Main Component</h2>
+      {props.children}
+    </div>
+  );
+}
 
 module.exports = Main;

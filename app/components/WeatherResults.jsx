@@ -1,12 +1,11 @@
-var React = require('react');
+'use strict'
 
-var WeatherResults = React.createClass({
-    render: function() {
-      var {temp, location} = this.props;
-      return (
-        <p>It's {temp} (C) in {location}</p>
-      );
-    }
-});
+let React = require('react');
+
+let WeatherResults = ({ temp, location }) => {
+  return (
+    <p>It's {temp} (C) in {location}</p>
+  );
+}
 
 module.exports = WeatherResults;
