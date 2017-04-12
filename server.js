@@ -7,11 +7,12 @@ const PORT = process.env.PORT || 3001;
 
 app.use((req, res, next) => {
   // forward https to http so that it work with free open weather
-  if (req.headers['x-forwarded-proto'] === 'http') {
-    next();
-  } else {
+  if (req.headers['x-forwarded-proto'] === 'https') {
     res.redirect('http://' + req.hostname + req.url);
+  } else {
+    next();
   }
+
 });
 
 app.use(express.static('public'));
